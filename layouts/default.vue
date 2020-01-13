@@ -41,8 +41,18 @@ h1,
 h2,
 h3 {
   font-family: 'Permanent Marker';
-  margin-bottom: 0;
+  margin-bottom: 10px;
   margin-top: 1em;
+  line-height: 1em;
+}
+
+@media (max-width: 600px) {
+  h1.title {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 h2 {
@@ -70,6 +80,7 @@ button {
   font-weight: bold;
   line-height: 0.8rem;
   margin-top: 2rem;
+  background: #fff;
 }
 
 .fadeInUp {

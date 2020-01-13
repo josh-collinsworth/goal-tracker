@@ -162,7 +162,7 @@ fieldset {
 input[type='text'] {
   border: 0;
   border-bottom: 1px solid;
-  padding: 0 0 0.5em;
+  padding: 0.5em 0.25em;
   margin-top: 1rem;
   min-width: 16rem;
 }

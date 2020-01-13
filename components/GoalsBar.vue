@@ -5,7 +5,7 @@
       <h2>Your goals:</h2>
       <p class="subhead">
         These are your goals from the past year. Use the form above to add
-        {{ goals.length > 0 ? 'more' : 'some' }}.
+        {{ goals.length > 0 ? 'more' : 'some' }}; hover to remove.
       </p>
       <table id="goals-list">
         <thead>
@@ -59,7 +59,10 @@ export default {
       this.$emit('addGoal', goal)
     },
     deleteGoal(e) {
-      this.$emit('deleteGoal', e.target.dataset.goal)
+      const confirmation = confirm(`Delete goal "${e.target.dataset.goal}"?`)
+      if (confirmation) {
+        this.$emit('deleteGoal', e.target.dataset.goal)
+      }
     }
   }
 }
@@ -77,6 +80,16 @@ table {
 
   tr {
     transition: alls 0.15s ease-in-out;
+
+    &:hover {
+      background: #f8f8f8;
+
+      .delete-button {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: initial;
+      }
+    }
   }
 
   td {
@@ -90,8 +103,9 @@ table {
 
   td,
   th {
-    padding: 0.5em 0;
+    padding: 0.75em 0;
     border-bottom: 1px solid #ccc;
+    line-height: 1.2;
 
     & + th,
     & + td {
@@ -111,15 +125,6 @@ table {
   margin-top: 0;
   border-radius: 5px;
   display: block;
-}
-
-tr:hover {
-  background: #f8f8f8;
-}
-
-tr:hover .delete-button {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: initial;
+  border: 1px solid #ccc;
 }
 </style>

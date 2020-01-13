@@ -14,7 +14,12 @@
           'grid-row': `${goal.enjoyability} / ${Number(goal.enjoyability) + 1}`
         }"
       >
-        {{ goal.completed == 'true' ? '✅' : '❌' }}
+        <span
+          :aria-label="goal.completed ? 'Successful' : 'Not successful'"
+          class="dot"
+        >
+          {{ goal.completed == 'true' ? '✅' : '❌' }}
+        </span>
         <span
           :style="{ left: labelPlacement(goal.flexibility) }"
           class="label"
@@ -94,8 +99,14 @@ export default {
     position: absolute;
     text-align: center;
 
-    &:hover .label {
+    .dot:hover + .label,
+    .label:hover {
       opacity: 1;
+      z-index: 2;
+    }
+
+    &:not(:hover) {
+      z-index: 1;
     }
 
     .label {
@@ -106,7 +117,7 @@ export default {
       transition: opacity 0.2s;
       background: rgba(255, 255, 255, 0.95);
       padding: 0.5rem;
-      bottom: 0;
+      bottom: 1rem;
       position: absolute;
       text-align: center;
       border: 1px solid #ccc;
