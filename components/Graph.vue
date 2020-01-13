@@ -1,7 +1,9 @@
 <template>
   <div id="graph-wrapper">
     <h2>Goals chart:</h2>
-    <p class="subhead">Your goals are automatically charted here.</p>
+    <p class="subhead">
+      Your goals are automatically charted here. (Hover to see goal names.)
+    </p>
     <ul id="graph">
       <li
         v-for="goal in goals"
@@ -97,6 +99,7 @@ export default {
     }
 
     .label {
+      font-family: 'Permanent Marker';
       opacity: 0;
       font-size: 1rem;
       width: 300%;

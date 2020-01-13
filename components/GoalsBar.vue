@@ -12,8 +12,8 @@
           <tr>
             <th>Goal:</th>
             <th>Successful:</th>
-            <th>Enjoyability (0–10):</th>
-            <th>Flexibility (0–10):</th>
+            <th>Enjoyability<br />(1–10):</th>
+            <th>Flexibility<br />(1–10):</th>
           </tr>
         </thead>
         <tbody is="transition-group" name="fadeInUp">
