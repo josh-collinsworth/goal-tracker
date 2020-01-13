@@ -1,7 +1,7 @@
 {
 	"version": 2,
 	"alias": [
-		"goalchart.now.sh"
+		"goal-chart.now.sh"
 	],
 	"github": {
 		"autoAlias": true
