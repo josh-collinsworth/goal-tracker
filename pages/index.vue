@@ -29,32 +29,12 @@ export default {
   },
   data() {
     return {
-      goals: [],
-      defaultGoals: [
-        {
-          name: 'Run a marathon',
-          flexibility: 1,
-          enjoyability: 4,
-          completed: true
-        },
-        {
-          name: 'MRR',
-          flexibility: 4,
-          enjoyability: 8,
-          completed: false
-        },
-        {
-          name: 'Read 20 books',
-          flexibility: 10,
-          enjoyability: 7,
-          completed: true
-        }
-      ]
+      goals: []
     }
   },
   mounted() {
     const savedGoals = JSON.parse(localStorage.getItem('nuxtGoalRetroGoals'))
-    this.goals = savedGoals || this.defaultGoals
+    this.goals = savedGoals || []
   },
   methods: {
     addGoal(newGoal) {
