@@ -1,6 +1,8 @@
 # nuxt-goals-tracker
 
-> My neat Nuxt.js project
+A nifty little goal tracker and retrospective app, inspired by [this Karen Borchert Medium post](https://medium.com/@karenborchert/want-to-actually-achieve-those-2020-goals-know-your-type-897070f92be9).
+
+---
 
 ## Build Setup
 

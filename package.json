@@ -1,7 +1,7 @@
 {
   "name": "nuxt-goals-tracker",
   "version": "1.0.0",
-  "description": "My neat Nuxt.js project",
+  "description": "The Karen Borchert Goal Retro Tool",
   "author": "Josh Collinsworth",
   "private": true,
   "scripts": {
