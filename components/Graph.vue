@@ -11,7 +11,9 @@
         :style="{
           'grid-column': `${goal.flexibility} / ${Number(goal.flexibility) +
             1}`,
-          'grid-row': `${goal.enjoyability} / ${Number(goal.enjoyability) + 1}`
+          'grid-row': `${invert(goal.enjoyability)} / ${invert(
+            Number(goal.enjoyability) - 1
+          )}`
         }"
       >
         <span
@@ -64,6 +66,9 @@ export default {
       } else {
         return '-100%'
       }
+    },
+    invert(x) {
+      return x * -1 + 11
     }
   }
 }
