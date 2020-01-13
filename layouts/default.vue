@@ -1,6 +1,21 @@
 <template>
   <div>
     <nuxt />
+    <footer>
+      <p>
+        &copy; 2020
+        <a href="https://joshcollinsworth.com" target="_blank"
+          >Josh Collinsworth</a
+        >. <br />Built with
+        <a href="https://nuxtjs.org/" target="_blank">NuxtJS</a>; based on
+        <a
+          href="https://medium.com/@karenborchert/want-to-actually-achieve-those-2020-goals-know-your-type-897070f92be9"
+          target="_blank"
+          >this Medium post</a
+        >
+        by Karen Borchert.
+      </p>
+    </footer>
   </div>
 </template>
 
@@ -76,5 +91,11 @@ button {
   &-move {
     transition: transform 0.3s;
   }
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
 }
 </style>
