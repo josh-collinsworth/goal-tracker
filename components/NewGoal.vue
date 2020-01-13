@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article id="new-goal-wrapper">
     <h2>Add a goal to the list:</h2>
     <form action="">
       <input
@@ -120,6 +120,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#new-goal-wrapper {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 2rem;
+  margin-bottom: 6rem;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
 form {
   width: 100%;
   max-width: 18rem;
@@ -165,6 +176,7 @@ input[type='text'] {
   padding: 0.5em 0.25em;
   margin-top: 1rem;
   min-width: 16rem;
+  background: transparent;
 }
 
 .subtext {
